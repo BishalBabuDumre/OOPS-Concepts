@@ -1,0 +1,38 @@
+Encapsulation:
+It means that we simply call a method in a class by not knowing what it has but knowing what it does. For example, I made a sample code to add, subtract, multiply and divide, which can be called but the user does not have to know what it is inside it. My code simply encapsulates the idea called calculator. It is related to data hiding.
+
+Abstract:
+It means that a certain code is made in a way, but does not have to be used under similar instances. For example, qsort function in C language can sort any kind of numerical or text data, but not necessary in which instance it was developed. More related to groups. So, the OOPS programming abstracts an idea only, and can be used in variety of situations.
+
+Inheritance and Polymorphism:
+Look at the code below:
+class Vehicle:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Move!")
+
+class Car(Vehicle):
+  pass
+
+class Boat(Vehicle):
+  def move(self):
+    print("Sail!")
+
+class Plane(Vehicle):
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang") #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+plane1 = Plane("Boeing", "747") #Create a Plane object
+
+for x in (car1, boat1, plane1):
+  print(x.brand)
+  print(x.model)
+  x.move()
+
+The class that is inheriting can be either within the same class or imported from another file. Inheritance simply means that all the attributes within parent class can be enjoyed by the child class. In this example, brand, model and move can be inherited by Car class from Vehicle class. Polymorphism means any method/function/operator with same name that can be executed on many objects and classes. In the above example, the method move has different forms in different classes though inheriting the same class Vehicle where other two variables brand and model are simply the same.
+A very nice interpretation of Polymorphism and Inheritance is explained in w3schools website.
